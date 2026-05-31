@@ -1,0 +1,289 @@
+:root {
+  --bg: #eef2ef;
+  --surface: #ffffff;
+  --soft: #f6fff7;
+  --line: #d7ddd9;
+  --text: #202020;
+  --muted: #555555;
+  --green: #3b8a54;
+  --green-soft: #e1f0e4;
+  --red: #b73434;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #176633;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.topbar,
+.page {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.topbar {
+  padding: 10px 18px 8px;
+}
+
+.topbar h1 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.user-line {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 7px 0 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+nav a,
+.ghost-link {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: #222222;
+  display: inline-block;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+nav a:first-child {
+  background: var(--green-soft);
+}
+
+.page {
+  border-top: 1px solid var(--line);
+  padding: 16px 18px 32px;
+}
+
+.page-title {
+  font-size: 26px;
+  margin: 10px 0 18px;
+}
+
+.purpose {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--green);
+  margin-bottom: 14px;
+  padding: 14px 16px;
+}
+
+.purpose h3 {
+  font-size: 20px;
+  margin: 0 0 14px;
+}
+
+.purpose p {
+  margin: 0;
+}
+
+.notice {
+  background: #e8f7e9;
+  border: 1px solid #b8d7bd;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+.stats {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 12px;
+}
+
+.stats article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 10px;
+}
+
+.stats strong {
+  display: block;
+  font-size: 20px;
+}
+
+.stats span {
+  color: var(--muted);
+  display: block;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  margin: 0 0 12px;
+  padding: 12px;
+}
+
+.section-head {
+  align-items: start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section-head h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.eyebrow {
+  color: #176633;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.form-grid {
+  background: var(--soft);
+  border-left: 4px solid var(--green);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+label {
+  color: var(--muted);
+  display: grid;
+  font-size: 13px;
+  font-weight: bold;
+  gap: 4px;
+}
+
+input,
+select,
+textarea {
+  background: #ffffff;
+  border: 1px solid #cfd6d1;
+  color: #111111;
+  font: inherit;
+  min-height: 32px;
+  padding: 5px 7px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+button {
+  align-self: end;
+  background: var(--green);
+  border: 1px solid #2d7441;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  min-height: 32px;
+  padding: 6px 10px;
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.actions form {
+  margin: 0;
+}
+
+.actions button {
+  background: var(--red);
+  border-color: #9d2828;
+  min-height: 28px;
+  padding: 4px 8px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 820px;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 7px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status {
+  background: #e9f4eb;
+  border: 1px solid #c8dccd;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+}
+
+.page.narrow {
+  max-width: 760px;
+}
+
+.error-text {
+  background: #fff4f4;
+  border: 1px solid #e2b5b5;
+  color: var(--red);
+  padding: 10px;
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .page {
+    max-width: 100%;
+  }
+
+  .stats,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide {
+    grid-column: auto;
+  }
+}
